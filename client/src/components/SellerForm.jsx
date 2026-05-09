@@ -302,7 +302,7 @@ export default function SellerForm() {
         {showLand && (
           <div className="sm:col-span-2">
             <label className="block text-sm font-medium text-slate-700" htmlFor="landSize">
-              Land size
+              Land size (In Cent)
             </label>
             <input
               id="landSize"
