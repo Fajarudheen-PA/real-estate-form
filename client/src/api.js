@@ -62,7 +62,7 @@ async function parseResponse(res) {
 // }
 export async function submitSeller(payload) {
   const url = "https://script.google.com/macros/s/AKfycbzO3Qt5fPoVVC6B3mcEfL2uxI1GqDE1keE3q82A6zSFHQTnHUufu2u8UY47QeHg4SpP/exec?sheet=Sellers&secret=mysecret123456789";
-console.log(payload);
+// console.log(payload);
   const res = await fetch(url, {
     method: "POST",
     body: JSON.stringify({
@@ -75,7 +75,8 @@ console.log(payload);
         payload.propertyType,      // Property Type
         payload.bhk || "",         // BHK
         payload.squareFeet || "",        // Size
-        payload.expectedPrice              // Price
+        payload.expectedPrice   ,           // Price
+        payload.landSize || "",        //Land Size
       ]
     })
   });
@@ -92,7 +93,7 @@ console.log(payload);
 // }
 export async function submitBuyer(payload) {
   const url = "https://script.google.com/macros/s/AKfycbzO3Qt5fPoVVC6B3mcEfL2uxI1GqDE1keE3q82A6zSFHQTnHUufu2u8UY47QeHg4SpP/exec?sheet=Buyers&secret=mysecret123456789";
-console.log("BUYER PAYLOAD:", payload);
+// console.log("BUYER PAYLOAD:", payload);
   const res = await fetch(url, {
     method: "POST",
     body: JSON.stringify({
@@ -106,7 +107,8 @@ console.log("BUYER PAYLOAD:", payload);
         payload.bhk || "",          // BHK
         payload.squareFeet || "",   // Size
         payload.budget,             // Budget
-        payload.comments || ""      // Comments
+        payload.comments || ""  ,    // Comments
+        payload.landSize || ""
       ]
     })
   });
