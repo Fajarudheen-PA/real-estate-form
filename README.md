@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Real estate intake app
 
 Single-page React app with an Express API. Submissions are appended to your **Google Sheet** using **Google Apps Script** (no Google Cloud Console project or service account).
@@ -123,3 +124,7 @@ For a **production** build, set `VITE_API_URL` to your deployed API origin befor
 | `server` | `npm start` | Production API |
 | `client` | `npm run dev` | Vite dev server |
 | `client` | `npm run build` | Production bundle |
+=======
+# real-estate-form
+Form based real estate data collection
+>>>>>>> 0087a2b477ca357486bcc0b4572ef9d4aac923e6
